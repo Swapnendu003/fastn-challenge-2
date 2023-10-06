@@ -1,40 +1,83 @@
--- ds.page: Welcome to doc-site
+-- import: fifthtry.github.io/button
+
+-- boolean $show: false
+
+-- ftd.column:
+align-content: center
+width: fill-container
+padding.px: 50
+
+-- ftd.container:
+color: #594545
+height.fixed.px: 540 
+width.fixed.px: 400 
+background.solid: #FFCA33
+padding.px: 70
+border-style: solid
+border-width.px: 5
+border-color: #000000
+margin.px: 10
+border-radius.px: 10
+
+-- ftd.text: Login
+role: $inherited.types.heading-large
+color: #000000
+text-align: center
 
 
-⚡️ `doc-site` will help you create a beautiful documentation site in no time.
+-- ftd.column:
+align-content: center
+width: fill-container
+padding.px: 30
 
-It provides out-of-the-box documentation features that can be used to create any
-kind of site(personal website, blog, etc).
-
-[Click here](https://fastn-community.github.io/doc-site/) to read doc-site
-documentation.
-
--- ds.h3: 🚀 Fast Track 
-
-Create your first fastn [web-site](https://fastn.com/expander/hello-world/-/build/) 
-project in just 5 minutes!
-
--- ds.h3: 🌟 Whats next?
-
-Create your first page. 
-[Click here to know more](https://fastn-community.github.io/doc-site/components/page/).
-
--- ds.h3: 👀 Want to learn more?
-
-Feel free to check [our expander course](https://fastn.com/expander/) or jump
-into our [FifthTry Discord server](https://discord.gg/bucrdvptYd).
+-- ftd.text-input:
+placeholder: Username
+type: text
+padding-horizontal.px: 16
+margin-top.px: 50
+padding-vertical.px: 10
+width.fixed.px: 280
+border-width.px: 1
+border-color: #594545
+border-radius.px: 4
 
 
--- ds.h3: 🎯 Used by?
 
-Our all documentation sites uses this `doc-site` theme.
+-- ftd.text-input:
+placeholder: Password
+type: password
+margin-top.px: 20
+padding-horizontal.px: 16
+padding-vertical.px: 10
+width.fixed.px: 280
+border-width.px: 1
+border-color: #594545
+border-radius.px: 4
 
-- [fastn.com](https://fastn.com/home/)
-- [FifthTry.com](https://www.fifthtry.com/)
+-- ftd.row:
+width: fill-container
+align-content: right
+margin-left.px: 80
+margin-top.px: 20
+margin-bottom.px: 20
+-- ftd.text: Forgot Password?
+link: index.html
+text-align: end 
+color: #594545
+style: bold,underline
+role: $inherited.types.copy-small
 
--- ds.h2: Learn fastn and become a pro?
+-- end: ftd.row
+-- button.button: Log In
+role: tertiary
+medium: true
+$on-click$: $ftd.set-bool($a = $show, v = true)
 
-You are one click away, just check [our documentation](https://fastn.com/) and 
-dont forget to jump into our [FifthTry Discord server](https://discord.gg/bucrdvptYd).
-
--- end: ds.page
+-- ftd.text: Challenge 2 done !!!
+if: {show}
+style: bold 
+text-align: center 
+padding.px: 26
+-- end: ftd.column
+-- end: ftd.container
+-- end: ftd.column
